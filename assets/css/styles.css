@@ -318,7 +318,8 @@ img {
 }
 
 .home__blob-img {
-  width: 200px;
+  width: 380px;
+  height: 100%;
 }
 
 .home__data {
