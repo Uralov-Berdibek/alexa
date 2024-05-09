@@ -305,7 +305,7 @@ img {
 
 .home__social-icon {
   font-size: 1.25rem;
-  color: var(--first-color);
+  color: white;
 }
 
 .home__social-icon:hover {
@@ -318,7 +318,7 @@ img {
 }
 
 .home__blob-img {
-  width: 170px;
+  width: 340px;
 }
 
 .home__data {
@@ -331,7 +331,7 @@ img {
 
 .home__subtitle {
   font-size: var(--h3-font-size);
-  color: var(--first-color);
+  color: white;
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-75);
 }
