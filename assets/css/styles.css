@@ -181,6 +181,15 @@ img {
   gap: 1.5rem;
 }
 
+.flex {
+  display: flex;
+  gap: 1;
+}
+
+.flex_img {
+  width: 120px;
+}
+
 .header {
   width: 100%;
   position: fixed;
