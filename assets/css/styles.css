@@ -341,7 +341,8 @@ img {
 }
 
 .home__title {
-  font-size: var(--big-font-size);
+  font-size: 2.5rem;
+  letter-spacing: 1.2;
   text-shadow: #fc0 1px 0 10px;
 }
 
