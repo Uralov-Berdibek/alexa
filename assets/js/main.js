@@ -117,3 +117,57 @@ window.addEventListener('scroll', scrollHeader);
 //   localStorage.setItem('selected-theme', getCurrentTheme());
 //   localStorage.setItem('selected-icon', getCurrentIcon());
 // });
+
+// send telegram bot
+
+const userName = document.querySelector('#name');
+const userPhone = document.querySelector('#number');
+const city = document.querySelector('#city');
+const sendBtn = document.querySelector('.btn-submit');
+
+sendBtn.addEventListener('click', async (e) => {
+  e.preventDefault();
+  let user = userName.value;
+  let phoneNumber = userPhone.value;
+  let region = city.value;
+
+  let tg = {
+    token: '7011212711:AAEuv66udXepEsW7czL1b-laZishZm6aXro', // Your bot's token that got from @BotFather
+    chat_id: '650837211', // The user's(that you want to send a message) telegram chat id
+  };
+
+  /**
+   * By calling this function you can send message to a specific user()
+   * @param {String} the text to send
+   *
+   */
+
+  function sendMessage(user, phoneNumber) {
+    const url = `https://api.telegram.org/bot${tg.token}/sendMessage`; // The url to request
+
+    const obj = {
+      chat_id: tg.chat_id,
+      text: `Ism: ${user}
+Telefon nomer: ${phoneNumber}
+Viloyot/Shahar: ${region}`,
+    };
+
+    const xht = new XMLHttpRequest();
+    xht.open('POST', url, true);
+    xht.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+    xht.send(JSON.stringify(obj));
+  }
+
+  // Now you can send any text(even a form data) by calling sendMessage function.
+  // For example if you want to send the 'hello', you can call that function like this:
+
+  if (user !== '' && phoneNumber !== '') {
+    sendMessage(user, phoneNumber);
+
+    setTimeout(() => {
+      window.location.href = 'tm.html';
+    }, 1000);
+  } else {
+    alert('Ism yoki telfon nomer kiritilmagan');
+  }
+});
