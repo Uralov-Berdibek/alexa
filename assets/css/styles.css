@@ -1,5 +1,5 @@
 /*==================== GOOGLE FONTS ====================*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -117,7 +117,7 @@ html {
 
 body {
   margin: 0 0 var(--header-height) 0;
-  font-family: var(--body-font);
+  font-family: 'Merriweather', serif;
   font-size: var(--normal-font-size);
   /* background-color: var(--body-color); */
   color: var(--text-color);
@@ -342,6 +342,7 @@ img {
 
 .home__title {
   font-size: var(--big-font-size);
+  text-shadow: #fc0 1px 0 10px;
 }
 
 .home__subtitle {
