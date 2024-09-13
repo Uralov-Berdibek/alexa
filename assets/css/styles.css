@@ -321,6 +321,13 @@ img {
   color: var(--first-color-alt);
 }
 
+.data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .home__blob {
   width: 200px;
   fill: var(--first-color);
@@ -346,6 +353,7 @@ img {
 }
 
 .home__description {
+  color: white;
   margin-bottom: var(--mb-2);
 }
 
