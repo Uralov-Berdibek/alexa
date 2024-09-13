@@ -301,9 +301,7 @@ img {
 }
 
 .home__content {
-  grid-template-columns: 0.5fr 3fr;
   padding-top: 3.5rem;
-  align-items: center;
 }
 
 .home__social {
@@ -322,6 +320,7 @@ img {
 }
 
 .data {
+  width: 100wv;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -449,6 +448,17 @@ img {
 .button-white:hover {
   background-color: var(--first-color);
   color: #fff;
+}
+
+.btn-data {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-submit {
+  width: 70%;
+  display: flex;
+  justify-content: center;
 }
 
 /*=============== VIDEO ===============*/
