@@ -120,6 +120,7 @@ window.addEventListener('scroll', scrollHeader);
 
 // send telegram bot
 
+// ===================== Send Message =================== //
 const userName = document.querySelector('#name');
 const userPhone = document.querySelector('#number');
 const city = document.querySelector('#city');
@@ -137,11 +138,10 @@ sendBtn.addEventListener('click', async (e) => {
   };
 
   /**
-   * By calling this function you can send message to a specific user()
-   * @param {String} the text to send
-   *
+   * By calling this function you can send message to a specific user
+   * @param {String} user - the user's name
+   * @param {String} phoneNumber - the user's phone number
    */
-
   function sendMessage(user, phoneNumber) {
     const url = `https://api.telegram.org/bot${tg.token}/sendMessage`; // The url to request
 
@@ -155,18 +155,25 @@ Viloyot/Shahar: ${region}`,
     const xht = new XMLHttpRequest();
     xht.open('POST', url, true);
     xht.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+
+    // Handle success and error
+    xht.onload = function () {
+      if (xht.status === 200) {
+        alert("Ma'lumotlar muvaffaqiyatli yuborildi!");
+      } else {
+        alert("Ma'lumot yuborishda xatolik yuz berdi.");
+      }
+    };
+
+    xht.onerror = function () {
+      alert("Tarmoq xatosi. Ma'lumotni yuborib bo'lmadi.");
+    };
+
     xht.send(JSON.stringify(obj));
   }
 
-  // Now you can send any text(even a form data) by calling sendMessage function.
-  // For example if you want to send the 'hello', you can call that function like this:
-
   if (user !== '' && phoneNumber !== '') {
     sendMessage(user, phoneNumber);
-
-    setTimeout(() => {
-      window.location.href = 'tm.html';
-    }, 1000);
   } else {
     alert('Ism yoki telfon nomer kiritilmagan');
   }
