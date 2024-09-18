@@ -344,6 +344,7 @@ img {
   font-size: 2.5rem;
   letter-spacing: 1.2;
   text-shadow: #fc0 1px 0 10px;
+  text-align: center;
 }
 
 .home__subtitle {
@@ -351,6 +352,8 @@ img {
   color: white;
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-75);
+  margin-top: 20px;
+  text-align: center;
 }
 
 .home__description {
@@ -523,19 +526,19 @@ img {
 }
 
 .contact__content {
-  background-color: var(--input-color);
+  background-color: white;
   border-radius: 0.5rem;
   padding: 0.75rem 1rem 0.25rem;
 }
 
 .contact__label {
   font-size: var(--smaller-font-size);
-  color: var(--title-color);
+  color: var(--first-color);
 }
 
 .contact__input {
   width: 100%;
-  background-color: var(--input-color);
+  background-color: transparent;
   color: var(--text-color);
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
